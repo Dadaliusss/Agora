@@ -48,8 +48,9 @@
       width: auto;
     }
     .header-content {
-      flex-grow: 1;
+      flex: 1;
       text-align: center;
+      width: 100%;
       margin: 10px 0;
     }
     .header-content h1 {
@@ -98,6 +99,15 @@
       max-width: 800px;
       margin: 0 auto 20px;
     }
+    blockquote {
+      font-style: italic;
+      font-size: 1.2em;
+      color: #555;
+      border-left: 4px solid #1b5e20;
+      margin: 20px auto;
+      padding-left: 20px;
+      max-width: 700px;
+    }
     
     /* Events */
     .event {
@@ -110,6 +120,31 @@
     }
     .event p {
       font-size: 1em;
+    }
+    
+    /* Membres & Equipe */
+    .team {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .team img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .leaders {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .leaders li {
+      margin: 5px 15px;
+      font-weight: bold;
+      color: #1b5e20;
     }
     
     /* Footer */
@@ -128,6 +163,9 @@
     .social-links a:hover {
       color: white;
     }
+    .language-switch {
+      margin-top: 10px;
+    }
     .language-switch a {
       margin: 0 10px;
       color: #a5d6a7;
@@ -145,10 +183,17 @@
       .logo-container {
         margin-bottom: 10px;
       }
+      .leaders {
+        flex-direction: column;
+      }
+      .leaders li {
+        margin: 5px 0;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Header Section -->
   <header class="animate__animated animate__fadeInDown">
     <div class="logo-container">
       <img src="images/images.png" alt="Agora logo" class="logo" style="max-height:70px;">
@@ -162,17 +207,29 @@
     </div>
   </header>
   
+  <!-- Navigation -->
   <nav class="animate__animated animate__fadeInDown animate__delay-2s">
     <a href="#about">À Propos</a>
+    <a href="#citation">Citation</a>
     <a href="#events">Événements</a>
+    <a href="#team">Équipe</a>
     <a href="#contact">Contact</a>
   </nav>
   
+  <!-- About Section -->
   <section id="about" class="animate__animated animate__fadeInUp animate__delay-1s">
     <h2>À Propos</h2>
     <p>Le Club Agora est le club culturel de l'EMSI Marrakech, vous invitant à une aventure culturo-artistique enrichissante.</p>
   </section>
   
+  <!-- Artistic Quote Section -->
+  <section id="citation" class="animate__animated animate__fadeInUp animate__delay-1s">
+    <blockquote>
+      "L'art lave notre âme de la poussière du quotidien." – Pablo Picasso
+    </blockquote>
+  </section>
+  
+  <!-- Events Section -->
   <section id="events" class="animate__animated animate__fadeInUp animate__delay-1s">
     <h2>Événements</h2>
     <div class="event">
@@ -189,8 +246,41 @@
         <a href="https://www.facebook.com/AGORAEMSI/videos/211229813471834/" target="_blank">Voir la vidéo</a>
       </p>
     </div>
+    <div class="event">
+      <h3>Semaine Culturelle</h3>
+      <p>
+        Rejoignez-nous pour la Semaine Culturelle qui se déroulera à la mi-avril, avec des activités variées, des expositions et des performances artistiques.
+      </p>
+    </div>
+    <div class="event">
+      <h3>Atelier Artistique</h3>
+      <p>
+        Participez à notre atelier artistique qui comprendra de la musique, des parties d'échecs, des jeux et bien d'autres activités ludiques pour stimuler votre créativité.
+      </p>
+    </div>
   </section>
   
+  <!-- Team/Membres Section -->
+  <section id="team" class="animate__animated animate__fadeInUp animate__delay-1s">
+    <h2>Notre Équipe</h2>
+    <div class="team">
+      <img src="images/comite.jpg" alt="Photo des membres du club">
+      <h3>Les Leaders du Club</h3>
+      <ul class="leaders">
+        <li>Nada</li>
+        <li>Khalil</li>
+        <li>Mehdi</li>
+        <li>Najd</li>
+        <li>Basma</li>
+        <li>Aya</li>
+        <li>Mohammed</li>
+        <li>Wiam</li>
+        <li>Salaheddine</li>
+      </ul>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
   <section id="contact" class="animate__animated animate__fadeInUp animate__delay-1s">
     <h2>Contact</h2>
     <p>Suivez-nous sur nos réseaux sociaux pour rester informé de nos activités :</p>
@@ -200,10 +290,11 @@
     </div>
   </section>
   
+  <!-- Footer -->
   <footer class="animate__animated animate__fadeInUp animate__delay-1s">
     <p>&copy; 2025 Club Agora - EMSI</p>
     <div class="language-switch">
-      <a href="#">Français</a> | <a href="#">English</a>
+      <a href="#">Français</a>
     </div>
   </footer>
   
