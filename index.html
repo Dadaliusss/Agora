@@ -1,186 +1,219 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Club Agora - EMSI</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            background-color: #e8f5e9;
-            color: #333;
-            scroll-behavior: smooth;
-        }
-        a {
-            text-decoration: none;
-            color: #1b5e20;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Header */
-        header {
-            background-color: #1b5e20;
-            color: white;
-            display: flex;
-            align-items: center;
-            padding: 20px;
-            position: relative;
-        }
-        .logo {
-            max-height: 80px;
-            margin: 0 20px;
-        }
-        .header-content {
-            flex-grow: 1;
-            text-align: center;
-        }
-        .header-content h1 {
-            margin: 0;
-            font-size: 2.5em;
-            font-family: 'Playfair Display', serif;
-        }
-        .header-content p {
-            margin: 5px 0 0;
-            font-size: 1.2em;
-        }
-
-        /* Navigation */
-        nav {
-            background-color: #2e7d32;
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-        }
-        nav a {
-            color: white;
-            padding: 10px 20px;
-            transition: background-color 0.3s;
-        }
-        nav a:hover {
-            background-color: #1b5e20;
-        }
-
-        /* Sections */
-        section {
-            padding: 60px 20px;
-            text-align: center;
-        }
-        section:nth-child(even) {
-            background-color: #f1f8e9;
-        }
-        h2 {
-            color: #1b5e20;
-            font-size: 2em;
-            margin-bottom: 20px;
-            font-family: 'Playfair Display', serif;
-        }
-        p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto 20px;
-        }
-
-        /* Events */
-        .event {
-            margin-bottom: 40px;
-        }
-        .event h3 {
-            color: #2e7d32;
-            font-size: 1.5em;
-        }
-        .event p {
-            font-size: 1em;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #1b5e20;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-        .social-links a {
-            margin: 0 15px;
-            color: #008e00;
-            font-size: 1.2em;
-            transition: color 0.3s;
-        }
-        .social-links a:hover {
-            color: white;
-        }
-        .language-switch a {
-            margin: 0 10px;
-            color: #a5d6a7;
-            font-weight: bold;
-        }
-        .language-switch a:hover {
-            color: white;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Club Agora - EMSI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      background-color: #e8f5e9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    a {
+      text-decoration: none;
+      color: #1b5e20;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Header */
+    header {
+      background-color: #1b5e20;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      position: relative;
+      flex-wrap: wrap;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+    .logo {
+      display: block;
+      margin: 0 20px;
+    }
+    /* Specific styling for EMSI logo to fix dimensions */
+    .logo-emsi {
+      max-height: 60px;
+      width: auto;
+    }
+    .header-content {
+      flex-grow: 1;
+      text-align: center;
+      margin: 10px 0;
+    }
+    .header-content h1 {
+      margin: 0;
+      font-size: 2.5em;
+      font-family: 'Playfair Display', serif;
+    }
+    .header-content p {
+      margin: 5px 0 0;
+      font-size: 1.2em;
+    }
+    
+    /* Navigation */
+    nav {
+      background-color: #2e7d32;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      padding: 10px 20px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: #1b5e20;
+    }
+    
+    /* Sections */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    section:nth-child(even) {
+      background-color: #f1f8e9;
+    }
+    h2 {
+      color: #1b5e20;
+      font-size: 2em;
+      margin-bottom: 20px;
+      font-family: 'Playfair Display', serif;
+    }
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+    
+    /* Events */
+    .event {
+      margin-bottom: 40px;
+    }
+    .event h3 {
+      color: #2e7d32;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    .event p {
+      font-size: 1em;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .social-links a {
+      margin: 0 15px;
+      color: #008e00;
+      font-size: 1.2em;
+      transition: color 0.3s;
+    }
+    .social-links a:hover {
+      color: white;
+    }
+    .language-switch a {
+      margin: 0 10px;
+      color: #a5d6a7;
+      font-weight: bold;
+    }
+    .language-switch a:hover {
+      color: white;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+      .logo-container {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header class="animate__animated animate__fadeInDown">
-       <img src="images/images.png" alt="Agora logo" class="logo" width="70" height="70">
-
-        <div class="header-content">
-            <h1>Bienvenue au Club Agora</h1>
-            <p>Votre passerelle vers la créativité et la culture à l'EMSI</p>
-        </div>
-        <img src="images/logo-1.png" alt="EMSI logo" class="logo" width="120" height="60">
-    </header>
-    <nav class="animate__animated animate__fadeInDown">
-        <a href="#about">À Propos</a>
-        <a href="#events">Événements</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <section id="about" class="animate__animated animate__fadeInUp">
-        <h2>À Propos</h2>
-        <p>Le Club Agora est le club culturel de l'EMSI Marrakech, vous invitant à une aventure culturo-artistique enrichissante.</p>
-    </section>
-    <section id="events" class="animate__animated animate__fadeInUp">
-        <h2>Événements</h2>
-        <div class="event">
-            <h3>Participation au Festival International du Film de Marrakech</h3>
-            <p>Le Club Agora EMSI Marrakech a participé au Festival International du Film de Marrakech, offrant aux membres une expérience immersive dans le monde du cinéma. <a href="https://www.facebook.com/BDEREV/videos/participation-du-club-agora-emsi-marrakech-au-fifm/364350300788100/" target="_blank">Voir la vidéo</a></p>
-        </div>
-        <div class="event">
-            <h3>EMSI Best Talent</h3>
-            <p>Le Club Agora a organisé le concours "EMSI Best Talent", mettant en valeur les compétences artistiques des étudiants. <a href="https://www.facebook.com/AGORAEMSI/videos/211229813471834/" target="_blank">Voir la vidéo</a></p>
-        </div>
-    </section>
-    <section id="contact" class="animate__animated animate__fadeInUp">
-        <h2>Contact</h2>
-        <p>Suivez-nous sur nos réseaux sociaux pour rester informé de nos activités :</p>
-        <div class="social-links">
-            <a href="https://www.instagram.com/club_agora_emsi" target="_blank">Instagram</a>
-            <a href="https://www.facebook.com/AGORAEMSI" target="_blank">Facebook</a>
-        </div>
-    </section>
-    <footer class="animate__animated animate__fadeInUp">
-        <p>&copy; 2025 Club Agora - EMSI</p>
-        <div class="language-switch">
-            <a href="#">Français</a> | <a href="#">English</a>
-        </div>
-    </footer>
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e
-::contentReference[oaicite:0]{index=0}
- 
-.preventDefault();
-
+  <header class="animate__animated animate__fadeInDown">
+    <div class="logo-container">
+      <img src="images/images.png" alt="Agora logo" class="logo" style="max-height:70px;">
+    </div>
+    <div class="header-content animate__animated animate__fadeInDown animate__delay-1s">
+      <h1>Bienvenue au Club Agora</h1>
+      <p>Votre passerelle vers la créativité et la culture à l'EMSI</p>
+    </div>
+    <div class="logo-container">
+      <img src="images/logo-1.png" alt="EMSI logo" class="logo logo-emsi">
+    </div>
+  </header>
+  
+  <nav class="animate__animated animate__fadeInDown animate__delay-2s">
+    <a href="#about">À Propos</a>
+    <a href="#events">Événements</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  
+  <section id="about" class="animate__animated animate__fadeInUp animate__delay-1s">
+    <h2>À Propos</h2>
+    <p>Le Club Agora est le club culturel de l'EMSI Marrakech, vous invitant à une aventure culturo-artistique enrichissante.</p>
+  </section>
+  
+  <section id="events" class="animate__animated animate__fadeInUp animate__delay-1s">
+    <h2>Événements</h2>
+    <div class="event">
+      <h3>Participation au Festival International du Film de Marrakech</h3>
+      <p>
+        Le Club Agora EMSI Marrakech a participé au Festival International du Film de Marrakech, offrant aux membres une expérience immersive dans le monde du cinéma. 
+        <a href="https://www.facebook.com/BDEREV/videos/participation-du-club-agora-emsi-marrakech-au-fifm/364350300788100/" target="_blank">Voir la vidéo</a>
+      </p>
+    </div>
+    <div class="event">
+      <h3>EMSI Best Talent</h3>
+      <p>
+        Le Club Agora a organisé le concours "EMSI Best Talent", mettant en valeur les compétences artistiques des étudiants. 
+        <a href="https://www.facebook.com/AGORAEMSI/videos/211229813471834/" target="_blank">Voir la vidéo</a>
+      </p>
+    </div>
+  </section>
+  
+  <section id="contact" class="animate__animated animate__fadeInUp animate__delay-1s">
+    <h2>Contact</h2>
+    <p>Suivez-nous sur nos réseaux sociaux pour rester informé de nos activités :</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/club_agora_emsi" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/AGORAEMSI" target="_blank">Facebook</a>
+    </div>
+  </section>
+  
+  <footer class="animate__animated animate__fadeInUp animate__delay-1s">
+    <p>&copy; 2025 Club Agora - EMSI</p>
+    <div class="language-switch">
+      <a href="#">Français</a> | <a href="#">English</a>
+    </div>
+  </footer>
+  
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
-
         if (targetElement) {
           window.scrollTo({
             top: targetElement.offsetTop,
