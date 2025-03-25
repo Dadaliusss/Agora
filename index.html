@@ -124,8 +124,11 @@
     .event p {
       font-size: 1em;
     }
+    .event video {
+      margin: 10px 0;
+    }
     
-    /* Membres & Equipe */
+    /* Membres & Équipe */
     .team {
       display: flex;
       flex-direction: column;
@@ -148,6 +151,16 @@
       margin: 5px 15px;
       font-weight: bold;
       color: #1b5e20;
+    }
+    
+    /* Contact & QR Code */
+    .whatsapp {
+      margin-top: 20px;
+    }
+    .whatsapp img {
+      max-width: 200px;
+      height: auto;
+      margin-top: 10px;
     }
     
     /* Footer */
@@ -227,6 +240,33 @@
   <!-- Events Section -->
   <section id="events" class="animate__animated animate__fadeInUp animate__delay-1s">
     <h2>Événements</h2>
+    <!-- Club Introduction Video -->
+    <div class="event">
+      <h3>Vidéo d'introduction</h3>
+      <video controls width="80%">
+        <source src="images/vid3.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la balise vidéo.
+      </video>
+    </div>
+    <!-- Journée Portes Ouvertes Video Event -->
+    <div class="event">
+      <h3>Journée Portes Ouvertes (Mars)</h3>
+      <p>Découvrez les coulisses de notre club lors de notre Journée Portes Ouvertes en mars.</p>
+      <video controls width="80%">
+        <source src="images/vid2.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la balise vidéo.
+      </video>
+      <video controls width="80%">
+        <source src="images/vid1.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la balise vidéo.
+      </video>
+    </div>
+    <!-- Journée des Femmes Event -->
+    <div class="event">
+      <h3>Journée des Femmes - 8 Mars</h3>
+      <p>Le Club Agora a célébré la Journée Internationale de la Femme le 8 mars, mettant en lumière les réalisations des femmes et favorisant un échange enrichissant.</p>
+    </div>
+    <!-- Existing Events -->
     <div class="event">
       <h3>Participation au Festival International du Film de Marrakech</h3>
       <p>
@@ -259,7 +299,7 @@
   <section id="team" class="animate__animated animate__fadeInUp animate__delay-1s">
     <h2>Notre Équipe</h2>
     <div class="team">
-      <img src="images/comite.jpg" alt="Photo des membres du club">
+      <img src="images/membres.png" alt="Photo des membres du club">
       <h3>Les Leaders du Club</h3>
       <ul class="leaders">
         <li>Nada</li>
@@ -281,6 +321,10 @@
     <div class="social-links">
       <a href="https://www.instagram.com/club_agora_emsi" target="_blank">Instagram</a>
       <a href="https://www.facebook.com/AGORAEMSI" target="_blank">Facebook</a>
+    </div>
+    <div class="whatsapp">
+      <p>Rejoignez notre groupe WhatsApp :</p>
+      <img src="images/scan.jpg" alt="QR Code WhatsApp">
     </div>
   </section>
   
