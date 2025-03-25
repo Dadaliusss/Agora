@@ -154,6 +154,13 @@
       width: 100%;
       height: 100%;
     }
+    /* Smaller video and image for Atelier Musical */
+    .small-video {
+      max-width: 50%;
+    }
+    .small-img {
+      max-width: 50%;
+    }
     
     /* Team/Membres & Équipe */
     .team {
@@ -302,7 +309,6 @@
         <h3>EMSI Best Talent</h3>
         <p>
           Le Club Agora a organisé le concours "EMSI Best Talent", mettant en valeur les compétences artistiques des étudiants. On vous invite à découvrir les talents de l'EMSI.
-          
         </p>
       </div>
       <div class="event">
@@ -316,12 +322,12 @@
       <div class="event">
         <h3>Atelier Musical</h3>
         <p>Participez à notre atelier musical qui allie créativité et performance. Retrouvez ici une vidéo de présentation ainsi qu'une image illustrant l'atelier.</p>
-        <!-- Embedded video (Replace VIDEO_ID with your actual YouTube video ID) -->
-        <div class="video-container">
+        <!-- Embedded video with smaller dimensions -->
+        <div class="video-container small-video">
           <iframe src="images/vid111.mp4" title="Atelier Musical Video" frameborder="0" allowfullscreen></iframe>
         </div>
-        <!-- Image for Atelier Musical -->
-        <img src="images/atelier1.jpg" alt="Atelier Musical" class="event-img" loading="lazy">
+        <!-- Image for Atelier Musical with smaller dimensions -->
+        <img src="images/atelier1.jpg" alt="Atelier Musical" class="event-img small-img" loading="lazy">
       </div>
     </section>
     
