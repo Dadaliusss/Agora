@@ -17,6 +17,7 @@
       background-color: #e8f5e9;
       color: #333;
       scroll-behavior: smooth;
+      line-height: 1.6;
     }
     a {
       text-decoration: none;
@@ -41,13 +42,11 @@
       justify-content: center;
       flex-direction: column;
       padding: 20px;
-      position: relative;
     }
     .header-logos {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 100%;
       margin-bottom: 10px;
     }
     .header-logos img {
@@ -104,7 +103,6 @@
     }
     p {
       font-size: 1.1em;
-      line-height: 1.6;
       max-width: 800px;
       margin: 0 auto 20px;
     }
@@ -133,36 +131,23 @@
     .event img.event-img {
       max-width: 80%;
       height: auto;
-      margin: 10px 0;
+      margin: 10px auto;
       display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    /* Responsive Video Embed */
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      max-width: 80%;
-      margin: 0 auto 20px;
-    }
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-    /* Smaller video and image for Atelier Musical */
-    .small-video {
-      max-width: 50%;
-    }
-    .small-img {
-      max-width: 50%;
     }
     
-    /* Team/Membres & Équipe */
+    /* Atelier Musical Adjustments */
+    .small-video,
+    .small-img {
+      max-width: 50%;
+      margin: 0 auto 20px;
+      display: block;
+    }
+    /* Remove any default white background */
+    video.small-video {
+      background-color: transparent;
+    }
+    
+    /* Team Section */
     .team {
       display: flex;
       flex-direction: column;
@@ -246,6 +231,10 @@
       .contact-container {
         padding: 0 20px;
       }
+      .small-video,
+      .small-img {
+        max-width: 90%;
+      }
     }
   </style>
 </head>
@@ -322,11 +311,12 @@
       <div class="event">
         <h3>Atelier Musical</h3>
         <p>Participez à notre atelier musical qui allie créativité et performance. Retrouvez ici une vidéo de présentation ainsi qu'une image illustrant l'atelier.</p>
-        <!-- Embedded video with smaller dimensions -->
-        <div class="video-container small-video">
-          <iframe src="images/vid111.mp4" title="Atelier Musical Video" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <!-- Image for Atelier Musical with smaller dimensions -->
+        <!-- HTML5 Video for Atelier Musical -->
+        <video class="small-video" controls>
+          <source src="images/vid111.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la lecture de vidéos.
+        </video>
+        <!-- Image for Atelier Musical -->
         <img src="images/atelier1.jpg" alt="Atelier Musical" class="event-img small-img" loading="lazy">
       </div>
     </section>
