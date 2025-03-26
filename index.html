@@ -27,12 +27,6 @@
       text-decoration: underline;
     }
     
-    /* Voir vidéo links */
-    .voir-video {
-      font-size: 1.2em;
-      font-weight: bold;
-    }
-    
     /* Header */
     header {
       background-color: #1b5e20;
@@ -129,22 +123,27 @@
       font-size: 1em;
     }
     .event img.event-img {
-      max-width: 80%;
+      width: 100%;
+      max-width: 50%;
       height: auto;
       margin: 10px auto;
       display: block;
     }
     
-    /* Atelier Musical Adjustments */
-    .small-video,
-    .small-img {
+    /* Atelier Musical Video & Image Styles */
+    video.atelier-video {
+      width: 100%;
       max-width: 50%;
-      margin: 0 auto 20px;
       display: block;
+      margin: 0 auto 20px;
+      border: none;
+      background: transparent;
     }
-    /* Remove any default white background */
-    video.small-video {
-      background-color: transparent;
+    img.atelier-img {
+      width: 100%;
+      max-width: 50%;
+      display: block;
+      margin: 0 auto 20px;
     }
     
     /* Team Section */
@@ -231,8 +230,8 @@
       .contact-container {
         padding: 0 20px;
       }
-      .small-video,
-      .small-img {
+      video.atelier-video,
+      img.atelier-img {
         max-width: 90%;
       }
     }
@@ -312,16 +311,16 @@
         <h3>Atelier Musical</h3>
         <p>Participez à notre atelier musical qui allie créativité et performance. Retrouvez ici une vidéo de présentation ainsi qu'une image illustrant l'atelier.</p>
         <!-- HTML5 Video for Atelier Musical -->
-        <video class="small-video" controls>
+        <video class="atelier-video" controls>
           <source src="images/vid111.mp4" type="video/mp4">
           Votre navigateur ne supporte pas la lecture de vidéos.
         </video>
         <!-- Image for Atelier Musical -->
-        <img src="images/atelier1.jpg" alt="Atelier Musical" class="event-img small-img" loading="lazy">
+        <img src="images/atelier1.jpg" alt="Atelier Musical" class="atelier-img" loading="lazy">
       </div>
     </section>
     
-    <!-- Team/Membres Section -->
+    <!-- Team Section -->
     <section id="team" class="animate__animated animate__fadeInUp animate__delay-1s">
       <h2>Notre Équipe</h2>
       <div class="team">
