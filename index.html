@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Club Agora - EMSI Marrakech, votre passerelle vers la créativité et la culture. Découvrez nos événements, notre équipe et contactez-nous !">
   <title>Club Agora - EMSI</title>
-  <!-- Favicon (update the link with your favicon) -->
+  <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <!-- Animate.css for animations -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -60,10 +60,6 @@
     .header-content h1 {
       margin: 0;
       font-size: 2.5em;
-    }
-    .header-content p {
-      margin: 5px 0 0;
-      font-size: 1.2em;
     }
     
     /* Navigation */
@@ -171,15 +167,37 @@
       color: #1b5e20;
     }
     
-    /* Contact & Google Form Embed */
+    /* Contact & Custom Form Styles */
     .contact-container {
       max-width: 640px;
       margin: 0 auto;
+      padding: 20px;
+      background: #f1f8e9;
+      border-radius: 8px;
     }
-    .contact-container iframe {
-      width: 100%;
-      height: 800px;
-      border: 0;
+    .contact-container form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .contact-container input, 
+    .contact-container textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+    .contact-container button {
+      padding: 10px;
+      background-color: #1b5e20;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    .contact-container button:hover {
+      background-color: #155a14;
     }
     
     .whatsapp {
@@ -244,7 +262,7 @@
       <img src="images/images.png" alt="Logo Agora" class="logo-agora" loading="lazy">
       <img src="images/logo-1.png" alt="Logo EMSI" class="logo-emsi" loading="lazy">
     </div>
-    <div class="header-content animate__animated animate__fadeInDown animate__delay-1s">
+    <div class="header-content animate__animated animate__zoomIn animate__delay-1s">
       <h1>Bienvenue au Club Agora</h1>
       <p>Votre passerelle vers la créativité et la culture à l'EMSI</p>
     </div>
@@ -305,18 +323,16 @@
       </div>
       <div class="event">
         <h3>Atelier Artistique</h3>
-        <p>Participez à nos atelier artistiques que inclus de la musique, des parties d'échecs, des jeux et bien d'autres activités ludiques pour stimuler votre créativité.</p>
+        <p>Participez à nos ateliers artistiques qui incluent de la musique, des parties d'échecs, des jeux et bien d'autres activités ludiques pour stimuler votre créativité.</p>
          <img src="images/atelier1.jpg" alt="Atelier Musical" class="atelier-img" loading="lazy">
       </div>
       <div class="event">
         <h3>Atelier Musical</h3>
-        <p>Participez à nos atelier musical qui allient créativité et performance. Retrouvez ici une image illustrant l'atelier.</p>
-        <!-- HTML5 Video for Atelier Musical -->
+        <p>Participez à nos ateliers musicaux qui allient créativité et performance. Retrouvez ici une vidéo illustrant l'atelier.</p>
         <video class="atelier-video" controls>
           <source src="images/vid111.mp4" type="video/mp4">
           Votre navigateur ne supporte pas la lecture de vidéos.
         </video>
-        <!-- Image for Atelier Musical -->
       </div>
     </section>
     
@@ -353,10 +369,15 @@
         <p>Rejoignez notre groupe WhatsApp :</p>
         <img src="images/scan.jpg" alt="QR Code WhatsApp" loading="lazy">
       </div>
-      <!-- Embedded Google Form -->
       <div class="contact-container">
         <h3>Envoyez-nous un message</h3>
-        <iframe src="https://docs.google.com/forms/d/1Ui4z6bbXCVgAssC92SEeHOMDHOOX3bFCddlWgMrKfiI/viewform?embedded=true">Chargement…</iframe>
+        <!-- Updated form using Formsubmit -->
+        <form id="contactForm" action="https://formsubmit.co/YOUR_EMAIL" method="POST">
+          <input type="text" name="user_name" placeholder="Votre nom" required>
+          <input type="email" name="user_email" placeholder="Votre email" required>
+          <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
       </div>
     </section>
   </main>
@@ -369,7 +390,27 @@
     </div>
   </footer>
   
-  <script defer>
+  <!-- JavaScript for handling form submission using Formsubmit and smooth scrolling -->
+  <script>
+    // Handle form submission with Formsubmit
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();  // Prevent the default form submission
+      
+      fetch(this.action, {
+        method: this.method,         // usually "POST"
+        body: new FormData(this)     // grab all form data
+      }).then(response => {
+        if (response.ok) {
+          alert('Message envoyé avec succès !');
+          this.reset();  // Optionally reset the form after success
+        } else {
+          alert('Échec de l’envoi du message. Veuillez réessayer plus tard.');
+        }
+      }).catch(error => {
+        alert('Échec de l’envoi du message. Veuillez réessayer plus tard.');
+      });
+    });
+    
     // Smooth scrolling for navigation links
     document.querySelectorAll('nav a').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
